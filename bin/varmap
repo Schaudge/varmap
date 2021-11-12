@@ -14,6 +14,7 @@ from varmap.config import main_config
 from varmap.localdb import main_index
 from functools import partial
 
+
 def parser_add_general(parser):
 
     parser.add_argument('--suspend',
@@ -26,6 +27,7 @@ def parser_add_general(parser):
                         default=0, # when >1, output all the exception
                         type=int,
                         help="verbose level, higher output more debugging information [0]")
+
 
 def parser_add_annotation(parser):
 
@@ -123,19 +125,12 @@ def parser_add_mutation(parser):
 
 
 if __name__ == '__main__':
-
-    ##===============
-    ## print versions
-    ##===============
     import sys
     if len([a for a in sys.argv if a in ['-version', '--version']]) > 0:
         import varmap
         sys.stderr.write("TransVar Version %s\n" % varmap.__version__)
         sys.exit(1)
 
-    ##==============
-    ## build parsers
-    ##==============
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers()
 

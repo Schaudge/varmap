@@ -13,3 +13,13 @@ cd varmap && pip install .
 ```bash
 varmap -h 
 ```
+
+3. Development
+If you want develop (debug) from you local envirement, you can copy the share library (.so), which was build by install step, to the varmap directory!
+e.g. 
+```bash
+cp tabix.cpython-*.so varmap/
+cp _sswlib.cpython-*.so varmap/ssw/
+```
+then, configure a proper varmap.cfg in varmap directory, see an example setting in varmap/varmap.cfg!
+

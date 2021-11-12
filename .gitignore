@@ -1,2 +1,4 @@
 .idea
 varmap/__pycache__
+varmap/ssw/*.so
+varmap/*.so
